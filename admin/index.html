@@ -68,7 +68,7 @@
     <div class="table-scroll">
       <table id="adminTable"><tbody></tbody></table>
     </div>
-    <div class="hint">「上限設定」の行に、その日に許可する希望休の人数を入力してください（空欄=上限なし）。「現在の希望者数」が上限に達すると赤く表示され、従業員側では選択できなくなります。送信済みの従業員には表の右端に「取消」ボタンが表示され、押すとその月の送信を取り消して再送信できるようになります。</div>
+    <div class="hint">「上限設定」の行に、その日に許可する希望休の人数を入力（空欄=上限なし）。「現在の希望者数」が上限に達すると赤く表示され、従業員側では選択できなくなります。</div>
     <div id="adminEmpty" class="empty-state" style="display:none;"></div>
     <div class="row" style="margin-top:12px; justify-content:flex-end;">
       <button class="ghost" onclick="exportExcel()">📊 Excelをダウンロード</button>
@@ -76,13 +76,13 @@
   </div>
 
   <div class="card">
-    <h2>従業員リストの管理</h2>
+    <h2>従業員リスト</h2>
     <div class="row">
       <input type="text" id="newEmpName" placeholder="新しい従業員名を入力">
       <button onclick="addEmployee()">追加</button>
     </div>
     <div class="emp-manage-list" id="empManageList"></div>
-    <div class="hint">「リンクをコピー」で、その従業員専用のURL(名前入り)をコピーできます。1か月に選べる日数の上限(6日)や、日ごとの人数上限が適用されます。</div>
+    <div class="hint">「リンクをコピー」で、その従業員専用のURL(名前入り)をコピーできます。</div>
   </div>
 </div>
 
