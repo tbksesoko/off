@@ -82,7 +82,7 @@
       <button onclick="addEmployee()">追加</button>
     </div>
     <div class="emp-manage-list" id="empManageList"></div>
-    <div class="hint">「リンクをコピー」で、その従業員専用のURL(名前入り)をコピーできます。</div>
+    <div class="hint">「リンクをコピー」で、その従業員専用のURLをコピーできます。</div>
   </div>
 </div>
 
@@ -233,7 +233,7 @@ function renderAdminTable() {
 
 async function resetSubmission(name) {
   const ym = monthKey(adminDate);
-  const ok = window.confirm(`${name}さんの${monthLabelText(adminDate)}分の送信済み希望休を取り消します。\n取り消すと本人が再度送信できるようになります。よろしいですか？`);
+  const ok = window.confirm(`${name}さんの${monthLabelText(adminDate)}分の送信済み希望休を取り消します。\n取り消すと本人が再度送信できるようになります。`);
   if (!ok) return;
   try {
     await deleteDoc(doc(db, "requests", name + "__" + ym));
