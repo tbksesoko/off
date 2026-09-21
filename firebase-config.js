@@ -6,10 +6,10 @@
 // 読み込まれます(1か所で管理)。
 
 export const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAXGPq3og0lOij91oj24Jm9P88UQ3nxauY",
+  authDomain: "hiltonoffreq.firebaseapp.com",
+  projectId: "hiltonoffreq",
+  storageBucket: "hiltonoffreq.firebasestorage.app",
+  messagingSenderId: "73279957205",
+  appId: "1:73279957205:web:f26903aaf61211755e5a5c"
 };
