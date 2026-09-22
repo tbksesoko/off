@@ -276,7 +276,10 @@ function renderAdminTable() {
   empty.style.display = 'none';
 
   const dayCounts = {};
-  Object.values(map).forEach(rec => {
+  const currentNamesForCount = new Set(employees);
+  // 従業員リストから削除された人のデータは希望者数のカウントに含めない
+  Object.entries(map).forEach(([name, rec]) => {
+    if (!currentNamesForCount.has(name)) return;
     const combined = new Set([...(rec.offDays || []), ...(rec.adminDays || [])]);
     combined.forEach(d => { dayCounts[d] = (dayCounts[d] || 0) + 1; });
   });
@@ -484,7 +487,10 @@ function exportExcel() {
   const daysInMonth = daysInMonthOf(adminDate);
 
   const dayCounts = {};
-  Object.values(map).forEach(rec => {
+  const currentNamesForCount = new Set(vnEmployees);
+  // 従業員リストから削除された人のデータは希望者数のカウントに含めない
+  Object.entries(map).forEach(([name, rec]) => {
+    if (!currentNamesForCount.has(name)) return;
     const combined = new Set([...(rec.offDays || []), ...(rec.adminDays || [])]);
     combined.forEach(d => { dayCounts[d] = (dayCounts[d] || 0) + 1; });
   });
